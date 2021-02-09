@@ -1,0 +1,23 @@
+---
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: eksworkshop-eksctl
+  region: us-east-1 
+
+availabilityZones: ["a", "b", "c"]
+
+managedNodeGroups:
+- name: managednodegroup
+  desiredCapacity: 3
+  instanceType: t3.small
+  ssh:
+    allow: true
+
+cloudWatch:
+  clusterLogging:
+   enableTypes: ["*"]
+
+secretsEncryption:
+  keyARN: arn:aws:kms:us-east-1:1234567890:key/adsfasdfasdf-adsfasdfasdfdsa-asdfasdfasdfasf
