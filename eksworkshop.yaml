@@ -6,7 +6,7 @@ metadata:
   name: eksworkshop-eksctl
   region: us-east-1 
 
-availabilityZones: ["a", "b", "c"]
+availabilityZones: ["us-east-1a", "us-east-1b", "us-east-1c"]
 
 managedNodeGroups:
 - name: managednodegroup
