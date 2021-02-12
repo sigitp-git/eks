@@ -32,3 +32,12 @@ sudo installer -pkg AWSCLIV2.pkg -target /
 Unauthorized (401): You have been logged out because your token has expired.
 
 do another aws eks get-token
+
+
+# kill proxy
+pkill -f 'kubectl proxy --port=8080'
+
+# delete dashboard
+kubectl delete -f https://raw.githubusercontent.com/kubernetes/dashboard/${DASHBOARD_VERSION}/aio/deploy/recommended.yaml
+
+unset DASHBOARD_VERSION
